@@ -1,0 +1,50 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="row mt-5">
+        <div class="col-md-12 my-5 text-center mb-2">
+            <h1 class="text-primary"><u>Contact</u></h1>
+        </div>
+        <div class="row justify-content-center my-3">
+            <!-- <div class="col-md-4">
+                <input type="name" class="form-control border-3" placeholder="Name">
+            </div> -->
+            <div class="col-md-4">
+                <mat-form-field style="width: 100%;">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row justify-content-center my-3">
+            <!-- <div class="col-md-4">
+                <input type="email" class="form-control border-3" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div> -->
+            <div class="col-md-4">
+                <mat-form-field style="width: 100%;">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row justify-content-center my-3">
+            <!-- <div class="col-md-4">
+                <textarea class="form-control border-3" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div> -->
+            <div class="col-md-4">
+                <mat-form-field style="width: 100%;">
+                    <mat-label>Textarea</mat-label>
+                    <textarea matInput formControlName="comment"></textarea>
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class = "row justify-content-center">
+            <div class="col-md-4 text-end">
+                <!-- <button class="btn btn-success">contact</button> -->
+                <button mat-raised-button color="accent" class="bg-success text-light" type="submit">Accept</button>
+            </div>
+        </div>
+
+    </div>
+</form>

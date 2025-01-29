@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg bg-body rounded-top border fixed-top">
+    <div class="container-fluid ms-5">
+        <a class="navbar-brand ps-5" href="#">Dishant</a>
+
+        <ul class="nav nav-underline justify-content-end me-5 pe-5">
+            <!-- <li *ngFor="let i of arr" class="nav-item me-5">
+                <a class="nav-link text-black" href="#">{{i}}</a>
+            </li> -->
+
+            <!-- <mat-tab-group (selectedTabChange)="onTabChanged($event)">
+                <mat-tab label="Home"></mat-tab>
+                <mat-tab label="about"></mat-tab>
+                <mat-tab label="skills"></mat-tab>
+                <mat-tab label="works"></mat-tab>
+                <mat-tab label="contact"></mat-tab>
+            </mat-tab-group> -->
+
+            <nav mat-tab-nav-bar [backgroundColor]="background" [tabPanel]="tabPanel">
+                @for (link of links; track link) {
+                  <a mat-tab-link
+                    (click)="activeLink = link.link"
+                    [routerLink]=link.link
+                    routerLinkActive #rla="routerLinkActive"
+                    [active]="activeLink == link.link"><i class="{{link.icon}} me-2"></i> {{link.label}} </a>
+                }
+              </nav>
+              <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+            
+        </ul>
+    </div>
+</nav>
